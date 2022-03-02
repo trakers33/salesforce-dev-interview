@@ -1,8 +1,7 @@
 # Salesforce Dev Interview
-## Apex and JS
 
 ## Apex 
-Question n°1
+### Question n°1
 How would you optimize this code ?
 ```java
 public class CLS_object {
@@ -32,7 +31,7 @@ public class CLS_object {
 	}
 }
 ```
-Question n°2
+### Question n°2
 How would you optimize this code ?
 ```java
 public static class InterviewClass{
@@ -72,13 +71,13 @@ public static class InterviewClass{
 ```
 
 ## Javascript 
-Question n°1 :
+### Question n°1 :
 What is the difference between theses 2 type of quotes
 ```js
 console.log('') vs console.log(``)
 ```
 
-Question n°2 : [Script 1](https://github.com/trakers33/salesforce-dev-interview/js/script-1.js)
+### Question n°2 : [Script 1](https://github.com/trakers33/salesforce-dev-interview/js/script-1.js)
 What is the value of object.value ?
 ```js
 var object = {
@@ -96,7 +95,7 @@ object.decrement();
 console.log(object.value);
 ```
 
-Question n°3 : [Script 3](https://github.com/trakers33/salesforce-dev-interview/js/script-3.js)
+### Question n°3 : [Script 3](https://github.com/trakers33/salesforce-dev-interview/js/script-3.js)
 How could you optimize this code ?
 ```js
 const data = ['object1','object2','object3','object4'];
