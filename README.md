@@ -4,36 +4,6 @@
 ### Question n°1
 How would you optimize this code ?
 ```java
-public class CLS_object {
-    public CLS_object() {}
-    public String companyName;
-	public String country;
-	public String emailAdress;
-	public String firstName;
-	public String jobTitle;
-	public String lastName;
-	public Object get(String variableName){
-		Object returnValue;
-		if(variableName == 'companyName'){
-			returnValue = companyName;
-		}else if(variableName == 'country'){
-			returnValue = country;
-		}else if(variableName == 'jobTitle'){
-			returnValue = jobTitle;
-		}else if(variableName == 'emailAdress'){
-			returnValue = emailAdress;
-		}else if(variableName == 'firstName'){
-			returnValue = firstName;
-		}else if(variableName == 'lastName'){
-			returnValue = lastName;
-		}
-		return returnValue;
-	}
-}
-```
-### Question n°2
-How would you optimize this code ?
-```java
 public static class InterviewClass{
 
     public static String customAccountQuery = System.label.CustomAccountQuery;
