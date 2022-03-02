@@ -40,6 +40,37 @@ public static class InterviewClass{
 }
 ```
 
+### Question n°2
+How would you optimize this code ?
+```java
+public static class InterviewClass{
+
+    public static String customAccountQuery = System.label.CustomAccountQuery;
+    public Decimal myTotal = 0;
+
+    public static void sendEmailsToSupport(){
+        String subject = 'Subject Test';
+        String body = 'Body Test';
+        List<Account> accounts = [SELECT Id,Name from Account];
+        for(Account acc : accounts){
+            for(Contact contact : [SELECT Email from Contact where AccountId =: acc AND Title like '%support%']){
+                sendSingleEmail(subject,body,contact.Email);
+            }
+        }
+    }
+
+    public static void sendSingleEmail(subject,body,email){
+        Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
+            message.toAddresses = new String[] {email};
+            message.subject = subject;
+            message.plainTextBody = body;
+        Messaging.SingleEmailMessage[] messages = new List<Messaging.SingleEmailMessage>{message};
+        Messaging.sendEmail(messages);
+    }
+
+}
+```
+
 ## Javascript 
 ### Question n°1 :
 What is the difference between theses 2 type of quotes
