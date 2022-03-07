@@ -21,17 +21,17 @@ public static class InterviewClass{
         String result = '';
         this.myTotal = this.calculateTotal();
         if(this.myTotal > 0){
-            if(total > 1){
-                if(total > 2){
-                    result = 'Not Unique'
+            if(this.myTotal > 1){
+                if(this.myTotal > 2){
+                    result = 'Not Unique';
                 }else{
-                    result = 'Unique'
+                    result = 'Unique';
                 }
             }else{
-                result = 'Empty'
+                result = 'Empty';
             }
         }else{
-            result = 'negative'
+            result = 'negative';
         }
 
         return result;
