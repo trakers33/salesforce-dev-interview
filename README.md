@@ -21,17 +21,17 @@ public static class InterviewClass{
         String result = '';
         this.myTotal = this.calculateTotal();
         if(this.myTotal > 0){
-            if(this.myTotal > 1){
-                if(this.myTotal > 2){
-                    result = 'Not Unique';
+            if(total > 1){
+                if(total > 2){
+                    result = 'Not Unique'
                 }else{
-                    result = 'Unique';
+                    result = 'Unique'
                 }
             }else{
-                result = 'Empty';
+                result = 'Empty'
             }
         }else{
-            result = 'negative';
+            result = 'negative'
         }
 
         return result;
@@ -70,6 +70,30 @@ public static class InterviewClass{
 
 }
 ```
+### Question n°3 :
+What is the value of the variable "Result" ? 
+```js
+upsert new List<Account>();
+Boolean result = Limits.getDMLStatements() == 0;
+```
+
+### Question n°4 :
+What is the value of the variable "Result" ? 
+```js
+List<Account> a1 = [SELECT ID FROM Account];
+List<Account> a2 = [SELECT ID FROM Account];
+Boolean result = a1 == a2;
+```
+
+### Question n°5 :
+What is the value of the variable "Result" ? 
+```js
+Account a = new Account(Name = 'Hello');
+insert a;
+List<Object> accounts = [SELECT (Select ID from Contacts) FROM Account WHERE ID > :a.Id];
+Integer result = accounts.size();
+```
+
 
 ## Javascript 
 ### Question n°1 :
