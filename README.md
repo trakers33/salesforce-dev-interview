@@ -21,8 +21,8 @@ public static class InterviewClass{
         String result = '';
         this.myTotal = this.calculateTotal();
         if(this.myTotal > 0){
-            if(total > 1){
-                if(total > 2){
+            if(this.myTotal > 1){
+                if(this.myTotal > 2){
                     result = 'Not Unique'
                 }else{
                     result = 'Unique'
@@ -46,7 +46,6 @@ How would you optimize this code ?
 public static class InterviewClass{
 
     public static String customAccountQuery = System.label.CustomAccountQuery;
-    public Decimal myTotal = 0;
 
     public static void sendEmailsToSupport(){
         String subject = 'Subject Test';
@@ -127,8 +126,9 @@ const data = ['object1','object2','object3','object4'];
 const dummyMethod = (key) => key;
 
 export default class InterviewExample {
-    result;
+    result = [];
     
+    /* Custom method simulating an asynchronous action **/
     loadExample = (key,callback) => {
         let res = dummyMethod(key);
         return callback(res);
