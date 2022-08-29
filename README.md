@@ -15,9 +15,18 @@ public static class InterviewClass{
         this.myTotal = accounts.size();
         return this.myTotal;
     }
+    
+    @AuraEnabled
+    public static Boolean isUnique(){
+        if(calculateTotal().size() == 1){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     @AuraEnabled
-    public static String getTotalOfAccount(){
+    public static String getTotalOfAccountInString(){
         String result = '';
         this.myTotal = this.calculateTotal();
         if(this.myTotal > 0){
