@@ -7,7 +7,7 @@ How would you optimize this code ?
 public static class InterviewClass{
 
     public static String customAccountQuery = System.label.CustomAccountQuery;
-    public Decimal myTotal = 0;
+    public static Decimal myTotal = 0;
 
     private static Decimal calculateTotal(){
         
