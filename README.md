@@ -102,6 +102,28 @@ List<Object> accounts = [SELECT (Select ID from Contacts) FROM Account WHERE ID 
 Integer result = accounts.size();
 ```
 
+### Question n°6 :
+Which method will throw an exception and why ?
+```java
+public static class InterviewClass{
+
+    public static void method_1(){
+        List<ExternalAccount__x> externalAccounts = [SELECT Id,Name from ExternalAccount__x limit 10]; // External Objects
+        
+        Account a = new Account(Name = 'Hello');
+        insert a;
+    }
+
+    public static void method_2(){
+        Account a = new Account(Name = 'Hello');
+        insert a;
+        
+        List<ExternalAccount__x> externalAccounts = [SELECT Id,Name from ExternalAccount__x limit 10]; // External Objects
+    }
+
+}
+```
+
 
 ## Javascript 
 ### Question n°1 :
@@ -136,22 +158,27 @@ const dummyMethod = (key) => key;
 
 export default class InterviewExample {
     result = [];
+    isLoaded = false;
     
-    /* Custom method simulating an asynchronous action **/
     loadExample = (key,callback) => {
         let res = dummyMethod(key);
         return callback(res);
     }
     
+    /* Method to optimize */
     loadData = () => {
         loadExample('object1',(res) =>{
-            result.push(res);
+            this.result.push(res);
+            
             loadExample('object2',(res2) =>{
-                result.push(res2);
+                this.result.push(res2);
+                
                 loadExample('object3',(res3) =>{
-                    result.push(res3);
+                    this.result.push(res3);
+                    
                     loadExample('object4',(res4) =>{
-                        result.push(res4);
+                        this.result.push(res4);
+                        this.isLoaded = true;
                     })
                 })
             })
